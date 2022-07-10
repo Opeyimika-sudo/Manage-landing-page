@@ -1,0 +1,16 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+:root {
+  --primary-red: hsl(12, 88%, 59%);
+  --primary-blue: hsl(228, 39%, 23%);
+  --dark-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --white: hsl(13, 100%, 96%);
+  --gray: hsl(0, 0%, 98%);
+}/*# sourceMappingURL=styles.css.map */
