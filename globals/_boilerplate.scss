@@ -4,6 +4,28 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: util.$font;
 }
 
+a, a:visited, a:active{
+    text-decoration: none;
+}
+
+.button, .btn{
+    padding: 10px 30px;
+    border-radius: 1000px;
+    background: var(--primary-red);
+    border: 2px solid var(--primary-red);
+}
+
+// for smaller buttons
+.btn{
+    padding: 10px 20px;
+}
+
+.button a, .btn a{
+    color: var(--white);
+}
+
+p{
+    color: var(--dark-blue);
+}
