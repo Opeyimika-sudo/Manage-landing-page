@@ -3,7 +3,29 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+.button, .btn {
+  padding: 10px 30px;
+  border-radius: 1000px;
+  background: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.btn {
+  padding: 10px 20px;
+}
+
+.button a, .btn a {
+  color: var(--white);
+}
+
+p {
+  color: var(--dark-blue);
 }
 
 :root {
@@ -13,4 +35,20 @@
   --very-dark-blue: hsl(233, 12%, 13%);
   --white: hsl(13, 100%, 96%);
   --gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3, p {
+  font-weight: 400;
 }/*# sourceMappingURL=styles.css.map */
