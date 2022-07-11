@@ -1,0 +1,58 @@
+.introduction{
+    background-image: url('../images/bg-tablet-pattern.svg');
+    outline: 3px solid purple;
+    background-size: 20rem 20rem;
+    background-position: right -60px top -40px;
+    background-repeat: no-repeat;
+}
+
+.header {
+    outline: 3px solid yellow;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    
+
+    &__logo{
+        max-width: 40%;
+        height: 30px;
+        object-fit: contain;
+        outline: 3px solid pink;
+        &--img{
+            width: 100%;
+        }
+    }
+
+    &__navbar{
+        display:none;
+    }
+
+    &--hamburger{
+        max-width: 100%;
+        outline: 3px dashed blue;
+        &--img{
+            width: 100%;
+        }
+    }
+
+    &__button{
+        display: none;
+    }
+
+    &--close{
+        display: none;
+    }
+}
+
+.main {
+   
+
+    &__image{
+        object-fit: contain;
+        max-width: 100%;
+        &--img {
+            width: 100%;
+            outline: 3px solid orange;
+        }
+    }
+}
