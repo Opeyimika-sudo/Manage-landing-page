@@ -79,6 +79,10 @@
 }
 
 .main {
+    background-image: url('../images/bg-tablet-pattern.svg');
+    background-size: 220px 220px;
+    background-position: right -80px bottom 5px;
+    background-repeat: no-repeat;
     &__image{
         object-fit: contain;
         max-width: 100%;
@@ -90,10 +94,6 @@
     }
 
     &__text{
-        background-image: url('../images/bg-tablet-pattern.svg');
-        background-size: 220px 220px;
-        background-position: right -110px bottom 5px;
-        background-repeat: no-repeat;
         text-align: center;
         padding-bottom: 50px;
         outline: 3px dashed green;
