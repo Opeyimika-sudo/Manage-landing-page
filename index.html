@@ -8,77 +8,80 @@
   <link rel="stylesheet" href="dist/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Manage landing page</title>
   
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body>
-  <header class="header">
-    <div class="header__logo">
-      <img src="images/logo.svg" alt="Manage logo">
-    </div>
-    <ul class="header__navbar">
-      <a href=""></a>
-      <li class="header__navbar__item"><a href="#">Pricing</a></li>
-      <li class="header__navbar__item"><a href="#">Product</a></li>
-      <li class="header__navbar__item"><a href="#">About Us</a></li>
-      <li class="header__navbar__item"><a href="#">Careers</a></li>
-      <li class="header__navbar__item"><a href="#">Community</a></li>
-    </ul>
-    <img src="images/icon-hamburger.svg" alt="hamburger icon" class="header__navbar--hamburger">
-    <img src="images/icon-close.svg" alt="close-hamburger icon" class="header__navbar--close">
-    <button class="button header__button"><a href="#" class="header__button--link">Get Started</a></button>
-  </header>
-  <!-- Main Section -->
-  <main class="main">
-    <div class="main__image">
-      <img src="images/illustration-intro.svg" alt="">
-    </div>
-    <div class="main__text">
-      <h1>Bring everyone together to build better products.</h1>
-      <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
-      <button class="button main__button"><a href="#" class="main__button--link">Get Started</a></button>
-    </div>
-  </main>
+  <section class="introduction">
+    <header class="row header">
+      <div class="header__logo">
+        <img src="images/logo.svg" class="header__logo--img" alt="Manage logo">
+      </div>
+      <div class="header--hamburger">
+        <img src="images/icon-hamburger.svg" alt="hamburger icon" class="header--hamburger--img">
+      </div>
+      <div class="header--close">
+        <img src="images/icon-close.svg" alt="close-hamburger icon" class="">
+      </div>
+      <ul class="header__navbar nav">
+        <li class="header__navbar__item"><a href="#">Pricing</a></li>
+        <li class="header__navbar__item"><a href="#">Product</a></li>
+        <li class="header__navbar__item"><a href="#">About Us</a></li>
+        <li class="header__navbar__item"><a href="#">Careers</a></li>
+        <li class="header__navbar__item"><a href="#">Community</a></li>
+      </ul> 
+      <button class="button header__button"><a href="#" class="header__button--link">Get Started</a></button>
+    </header>
+    <!-- Main Section -->
+    <main class="row main">
+      <div class="main__image">
+        <img src="images/illustration-intro.svg" class="main__image--img" alt="">
+      </div>
+      <div class="main__text">
+        <h1>Bring everyone together to build better products.</h1>
+        <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+        <button class="button main__button"><a href="#" class="main__button--link">Get Started</a></button>
+      </div>
+    </main>
+  </section>
+  
   <!-- Secondary Section -->
   <section class="secondary">
-    <div class="secondary__header">
-      <h2>What’s different about Manage?</h2>
+    <div class="row secondary__header">
+      <h1>What’s different about Manage?</h1>
       <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
     </div>
     <div class="secondary__text--list">
       <div class="secondary__text--list--one">
-        <div class="secondary__text--head">
+        <div class="secondary__text--list--one--head">
           <button class="btn secondary__text--button"><a href="#">01</a></button>
           <h3>Track company-wide progress</h3>
         </div> 
-        <p> See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
+        <p class="row"> See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
       </div>
       <div class="secondary__text--list--two">
-        <div class="secondary__text--head">
+        <div class="secondary__text--list--two--head">
           <button class="btn secondary__text--button"><a href="#">02</a></button>
           <h3>Advanced built-in reports</h3>
         </div> 
-        <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
+        <p class="row">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
         </p>
       </div>
       <div class="secondary__text--list--three">
-        <div class="secondary__text--head">
+        <div class="secondary__text--list--three--head">
           <button class="btn secondary__text--button"><a href="#">03</a></button>
           <h3>Everything you need in one place</h3>
         </div> 
-        <p>Stop jumping from one service to another to communicate, store files,track tasks and share documents. Manage offers an all-in-one team productivity solution.
+        <p class="row">Stop jumping from one service to another to communicate, store files,track tasks and share documents. Manage offers an all-in-one team productivity solution.
         </p>
       </div>
     </div>
   </section>
   <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="testimonials-list">
+  <section class="row testimonials">
+    <div class="testimonials__list">
+      <h2>What they've said</h2>
       <div class="testimonials__list__one">
         <div class="testimonials__list__one--img">
           <img src="images/avatar-anisha.png" alt="">
@@ -119,11 +122,15 @@
         </div>
       </div>
     </div>
-    <button class="button testimonials--button"><a href="#">Get Started</a></button>
+    <div class="testimonials--button">
+      <button class="button"><a href="#">Get Started</a></button>
+    </div>
   </section>
   <section class="cta">
     <h1>Simplify how your team works today.</h1>
-    <button class="button cta__button"><a href="#">Get Started</a></button>
+    <div class="cta__button">
+      <button class="cta__button--btn"><a href="#">Get Started</a></button>
+    </div>
   </section>
   <footer class="footer">
     <form action="">
@@ -131,13 +138,13 @@
       <button class="btn footer__button"><a href="#">GO</a></button>
     </form>
     <div class="footer__list">
-      <ul class="footer__list-primary">
+      <ul class="footer__list--primary">
         <li><a href="#">Home</a></li>
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Products</a></li>
         <li><a href="#">About Us</a></li>
       </ul>
-      <ul class="footer__list-secondary">
+      <ul class="footer__list--secondary">
         <li><a href="#">Careers</a></li>
         <li><a href="#">Community</a></li>
         <li><a href="#">Privacy Policy</a></li>
@@ -150,12 +157,15 @@
       <img src="images/icon-pinterest.svg" alt="">
       <img src="images/icon-instagram.svg" alt="">
     </div>
-    <img src="images/logo.svg" alt="">
-    <p>Copyright 2022. All Rights Reserved</p>
+    <div class="footer__logo">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <p>Copyright 2022. All Rights Reserved.</p>
+    <div class="row attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#" target="_blank">Opeyimika</a>.</p>
+    </div>
   </footer>
-  <div class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#" target="_blank">Opeyimika</a>.</p>
-  </div>
+  
 </body>
 </html>
