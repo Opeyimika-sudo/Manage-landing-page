@@ -45,14 +45,29 @@
 }
 
 .main {
-   
-
     &__image{
         object-fit: contain;
         max-width: 100%;
+        padding-bottom: 20px;
         &--img {
             width: 100%;
             outline: 3px solid orange;
+        }
+    }
+
+    &__text{
+        background-image: url('../images/bg-tablet-pattern.svg');
+        background-size: 220px 220px;
+        background-position: right -110px bottom 5px;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-bottom: 50px;
+        h1{
+            font-size: 2rem; 
+            padding-bottom: 10px;   
+        }
+        p{
+            padding-bottom: 30px;
         }
     }
 }
