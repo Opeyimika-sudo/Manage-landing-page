@@ -7,10 +7,6 @@
 }
 
 // Utility Class for displaying icons
-.utility{
-    display: inline-block;
-}
-
 .header {
     // outline: 3px solid yellow;
     padding: 30px 0;
@@ -96,7 +92,7 @@
     &__text{
         text-align: center;
         padding-bottom: 50px;
-        outline: 3px dashed green;
+        // outline: 3px dashed green;
         h1{
             font-size: 2rem; 
             padding-bottom: 10px;   
@@ -161,14 +157,22 @@
 }
 
 .testimonials {
-
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--primary-blue);
+    }
     &__list{
-        margin-bottom: 40px;
-        h2{
-            font-size: 1.5rem;
-            text-align: center;
-            color: var(--primary-blue);
+        margin-bottom: 10px;
+
+        // &__one{
+        //     background-color: blue;
+        // }
+        
+        &__two, &__three, &__four{
+            display: none;
         }
+        
 
         &__one, &__two, &__three, &__four{
             margin-top: 50px;
@@ -176,6 +180,8 @@
             min-height: 250px;
             background: var(--gray);
             position: relative;
+
+            
 
             &--img{
                 max-width: 100%;
@@ -191,22 +197,51 @@
                 }
             }
 
+            
+
             &--text{
                 text-align: center;
                 h3{
                     margin-bottom: 15px;
                     color: var(--primary-blue);
                 }
-                p{
-                    margin-bottom: 40px;
-                }
             }
         }
     }
+
+    
+    &__circle{
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: center;
+        gap: 3px;
+
+        &--one, &--two, &--three, &--four{
+            border-radius: 50%;
+            height: 5px;
+            padding: 3px;
+            width: 5px;
+            border: 2px solid var(--primary-red);
+
+            &:hover{
+                background-color: var(--primary-red);
+            }
+        }
+
+        
+    }
+
     &--button{
         text-align: center;
         margin-bottom: 40px;
     }
+
+    
+}
+
+// Fill 
+.fill{
+    background-color: var(--primary-red);
 }
 
 .cta {
