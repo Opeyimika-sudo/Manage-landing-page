@@ -1,9 +1,16 @@
+@use '../util' as util;
+
 .introduction{
     background-image: url('../images/bg-tablet-pattern.svg');
     // outline: 3px solid purple;
     background-size: 20rem 20rem;
     background-position: right -60px top -40px;
     background-repeat: no-repeat;
+
+    @include util.breakpoint(large){
+        background-size: 100% 100%;
+        background-position: right -100px top -60px;
+    }
 }
 
 // Utility Class for displaying icons
@@ -13,6 +20,10 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include util.breakpoint(large){
+
+    }
     
 
     &__logo{
@@ -75,28 +86,56 @@
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    // outline: 3px solid palegreen;
     background-image: url('../images/bg-tablet-pattern.svg');
     background-size: 220px 220px;
     background-position: right -80px bottom 5px;
     background-repeat: no-repeat;
+
+    @include util.breakpoint(large){
+        flex-direction: row-reverse;
+        width: 80%;
+        margin: 50px auto;
+        gap: 50px;
+    }
+
     &__image{
         object-fit: contain;
         max-width: 100%;
         padding-bottom: 20px;
+        // outline: 4px solid hotpink;
         &--img {
             width: 100%;
             // outline: 3px solid orange;
+        }
+
+        @include util.breakpoint(large){
+            &--img {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 
     &__text{
         text-align: center;
         padding-bottom: 50px;
+
+        @include util.breakpoint(large){
+            text-align: left;
+            width: 100%;
+        }
         // outline: 3px dashed green;
         h1{
             font-size: 2rem; 
             padding-bottom: 10px;   
             color: var(--primary-blue);
+
+            @include util.breakpoint(large){
+                padding-block: 30px;
+            }
         }
         p{
             padding-bottom: 30px;
@@ -106,8 +145,20 @@
 
 .secondary {
     padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    // outline: 3px solid blue;
+    @include util.breakpoint(large){
+        width: 80%;
+        margin: 100px auto;
+        flex-direction: row;
+        // outline-offset: 10px;
+        // border: 3px solid pink;
+        gap: 100px;
+    }
+
     &__header{
-       
+    //    outline: 3px solid brown;
         h1{
             font-size: 1.5rem;
             text-align: center;
@@ -115,25 +166,46 @@
             margin: 0 auto 20px auto;
             // outline: 3px dashed gold;
             color: var(--primary-blue);
+
+            @include util.breakpoint(large){
+               font-size: 2rem;
+               text-align: left;
+               margin: 40px 0;
+               width: 100%;
+            }
         }
         p{
             width: 100%;
             // outline: 3px solid red;
             line-height: 6vh;
             text-align: center;
+            // outline: 3px solid yellow;
+            @include util.breakpoint(large){
+                width: 100%;
+                font-size: 1.2rem;
+                text-align: left;
+            }
         }
+
+        
     }
     &__text--list{
         display: flex;
         flex-direction: column;
         margin: 40px 0;
+        // outline: 3px solid red;
+
+        @include util.breakpoint(large){
+            margin: 0;
+            padding: 40px 0;
+        }
 
         &--one, &--two{
             margin-bottom: 40px;
         }
 
         &--one, &--two, &--three {
-
+            // outline: 3px solid navajowhite;
             &--head{
                 display: flex;
                 flex-direction: row;
@@ -145,12 +217,30 @@
                 border-bottom-left-radius: 1000px;
                 width: 95%;
                 margin: 0 0 0 auto;
+                @include util.breakpoint(large){
+                    text-align: left;
+                    background: transparent;
+                    width: 100%;
+                    margin: 0;
+                    gap: 30px;
+                }
+
                 h3{
                     font-size: 0.9rem;
+                    // outline: 3px solid blueviolet;
+
+                    @include util.breakpoint(large){
+                        font-size: 1.1rem;
+                    }
                 }
             }
             p{
                 margin-top: 20px;
+                // outline: 3px solid salmon;
+                @include util.breakpoint(large){
+                    width: 100%;
+                    padding: 0 0 0 80px;
+                }
             }
         }
     }
@@ -326,5 +416,10 @@
     p{
         width: 100%;
         text-align: center;
+        
+    }
+
+    p:first-of-type{
+        margin-bottom: 20px;
     }
 }
