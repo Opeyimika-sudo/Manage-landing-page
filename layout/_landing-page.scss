@@ -268,7 +268,7 @@
     }
     &__list{
         // margin-bottom: 10px;
-        width: 80%;
+        width: 90%;
         margin: 0 auto 10px auto;
 
         @include util.breakpoint(large){
@@ -314,6 +314,7 @@
         &__one, &__two, &__three, &__four{
             margin-top: 50px;
             padding-top: 40px;
+            padding-inline: 10px;
             min-height: 250px;
             background: var(--gray);
             position: relative;
@@ -322,7 +323,6 @@
 
             @include util.breakpoint(large){
                 box-shadow: 0 0 2px;
-                padding-inline: 10px;
             }
     
             &--img{
@@ -333,7 +333,7 @@
                 position: absolute;
                 top: -25px;
                 transform: translateX(46%);
-                left: 38%;
+                left: 33%;
 
                 @include util.breakpoint(large){
                     left: 41%;
@@ -406,25 +406,53 @@
     padding-block: 50px;
     padding-inline: 20px;
 
-    h1{
-        color: var(--white);
-        font-size: 2.2rem;
-        text-align: center;
+    @include util.breakpoint(large){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 200px;
+        //width: 80%;
     }
+    
+    &__screen{
+        display: flex;
+        flex-direction: column;
 
-    &__button{
+        @include util.breakpoint(large){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            color: var(--white);
+            font-size: 2.2rem;
+            text-align: center;
+
+            @include util.breakpoint(large){
+                width: 40%;
+                text-align: left;
+            }
+        }
+
+        &__button{
             margin-top: 30px;
             text-align: center;
-        
-        &--btn{
-            background: white;
-            border: 2px solid white;
 
-            a{
-                color: #f25f3a;
+            @include util.breakpoint(large){
+                margin-top: 0;
+            }
+        
+            &--btn{
+                background: white;
+                border: 2px solid white;
+
+                a{
+                    color: #f25f3a;
+                }
             }
         }
     }
+    
 }
 
 .footer {
