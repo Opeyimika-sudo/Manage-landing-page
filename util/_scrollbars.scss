@@ -1,0 +1,21 @@
+$tall: 10px;
+// $tall
+// for scrollbars
+@mixin scrollbar{
+    &::-webkit-scrollbar{
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: hsl(13, 100%, 96%);
+        border-radius: 30px;
+        margin-inline: 30px;
+        box-shadow: 0 0 2px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: hsl(12, 91%, 56%);
+        border-radius: 30px;
+        
+    }
+}
