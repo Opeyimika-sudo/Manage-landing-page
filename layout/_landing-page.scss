@@ -22,7 +22,15 @@
     position: relative;
 
     @include util.breakpoint(large){
+        align-items: center; 
+        
+        &--hamburger{
+            display: none;
+        }
 
+        &--close{
+            display: none;
+        }
     }
     
 
@@ -31,17 +39,49 @@
         height: 30px;
         object-fit: contain;
         // outline: 3px solid pink;
+
+        
         &--img{
             width: 100%;
+
+            @include util.breakpoint(large){
+                height: 50px;
+                // align-item: center;
+            }
         }
     }
 
     &__navbar{
         display:none;
+
+        @include util.breakpoint(large){
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                
+                > li{
+                    margin-block: 0;
+                    height: fit-content;
+                    margin-inline: 20px;
+                    
+                    >a{
+                        font-size: 1.2rem;
+                        >:hover{
+                            color: hsl(224, 90%, 50%);
+                        }
+                    }
+
+                }
+        }
     }
 
     &--hamburger{
         max-width: 100%;
+
+        @include util.breakpoint(large){
+            display: none !important;
+        }
+            
         // outline: 3px dashed blue;
         &--img{
             width: 100%;
@@ -50,6 +90,11 @@
 
     &__button{
         display: none;
+
+        @include util.breakpoint(large){
+            display: block;
+        }
+            
     }
 
     &--close{
@@ -68,16 +113,31 @@
     background-color: var(--gray);  
     width: 100%;
     box-shadow: 0 0 4px;
+    border-radius: 10px;
 }
 
 .header__navbar__item {
     padding-bottom: 20px;
     text-align: center;
+
+    @include util.breakpoint(large){
+        padding-bottom: 0;
+
+        >a:hover {
+                color: hsl(224, 90%, 50%);
+            }
+    }
+
+   
 }
 
 .header__navbar__item:nth-child(1){
     padding-top: 40px;
     text-align: center;
+
+    @include util.breakpoint(large){
+        padding-top: 0;
+    }
 }
 
 .header__navbar__item > a{
@@ -282,25 +342,6 @@
             width: 100%;
             @include util.scrollbar;
         }
-
-        
-            
-            // Animation
-            // animation: scroll ease forwards 10s infinite;
-
-            // @keyframes scroll{
-            //     0%{ 
-            //         transform: translateX(120%);
-            //     }
-            //     // 25%{
-            //     //     display: flex;
-            //     //     transform: translateX(100%);
-            //     // }
-            //     100%{
-            //         transform: translateX(-120%);
-            //     }
-            // }
-        
         
         &__two, &__three, &__four{
             display: none;
@@ -333,7 +374,7 @@
                 position: absolute;
                 top: -25px;
                 transform: translateX(46%);
-                left: 33%;
+                left: 43%;
 
                 @include util.breakpoint(large){
                     left: 41%;
@@ -460,19 +501,80 @@
     display: flex;
     flex-direction: column;
     color: var(--gray);
-    min-height: 400px;
+    height: 400px;
     padding: 40px 20px 20px 20px;
 
-    input {
-        padding: 10px 30px;
-        border-radius: 1000px;
-        width: 75%;
-        border: 3px solid white;
+    @include util.breakpoint(large){
+        flex-direction: row;
+        padding: 20px 20px;
+        // align-items: stretch;
+        height: 200px;
+        gap: 50px;
+
+        &__id{
+            order: 1;
+            justify-content: space-between;
+            width: 30%;
+
+            //  margin: 0 auto 10px;
+        //     img{
+        //         padding-inline: 10px;
+        //         margin: auto; 
+        //     }
+        // } 
+    
+        // &--logo{
+        //     margin: 20px auto;
+        //     max-width: 75%;
+
+            &--socials{
+                order: 1;
+                margin: 0 auto;
+            }
+
+            &--logo{
+                margin: 0px auto;
+                max-width: 100%;
+            }
+        }
+
+        &__list{
+            order: 2;
+            width: 40%;
+            height: fit-content;
+            margin-block: 0px !important;
+            
+        }
+
+        &__form {
+            order: 3;
+            width: 30%;
+            height: min-content;
+
+            input{
+                padding: 10px 50px;
+                width: 100%;
+            }
+        }
     }
 
-    ::placeholder{
-        font-size: 0.9rem;
+    &__form{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        input {
+            padding: 10px 30px;
+            border-radius: 1000px;
+            width: 75%;
+            border: 3px solid white;
+        }
+    
+        ::placeholder{
+            font-size: 0.9rem;
+        }
     }
+    
 
     a{
         color: var(--gray);
@@ -482,37 +584,62 @@
         margin-block: 20px;
         display: flex;
         gap: 40px;
+        
         justify-content: space-around;
+
+        &--primary, &--secondary{
+            display: flex;
+            height: fit-content;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         &--primary li, &--secondary li{
             padding-block: 10px;
         }
     }
 
-    &__socials {
-        margin: 0 auto 10px;
-        img{
-            padding-inline: 10px;
-            margin: auto; 
-        }
-    } 
-
-    &__logo{
-        margin: 20px auto;
-        max-width: 75%;
-        filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(224%) hue-rotate(152deg) brightness(114%) contrast(96%);
-        img{
-            width: 100%;
+    &__id{
+        display: flex;
+        flex-direction: column;
+        &--socials {
+            margin: 0 auto 10px;
+            img{
+                padding-inline: 10px;
+             
+            }
+        } 
+    
+        &--logo{
+            margin: 20px auto;
+            max-width: 75%;
+            filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(224%) hue-rotate(152deg) brightness(114%) contrast(96%);
+            img{
+                width: 100%;
+            }
         }
     }
+    
+    
+}
 
+.credit{
+    background-color: var(--very-dark-blue);
+    position: relative;
     p{
         width: 100%;
         text-align: center;
-        
+
     }
 
-    p:first-of-type{
+    > p{
         margin-bottom: 20px;
+
+        @include util.breakpoint(large){
+            text-align: right;
+            position: absolute;
+            top: -60px;
+            right: 40px;
+        }
     }
 }
