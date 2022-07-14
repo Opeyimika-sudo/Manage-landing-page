@@ -10,16 +10,20 @@ a, a:visited, a:active{
     text-decoration: none;
 }
 
-.button, .btn{
+.button, .btn, .cta__screen__button--btn{
     padding: 10px 30px;
     border-radius: 1000px;
+    cursor: pointer;
+}
+
+.button, .btn{
     background: var(--primary-red);
     border: 2px solid var(--primary-red);
 }
 
 // for smaller buttons
 .btn{
-    padding: 10px 20px;
+    padding: 8px 15px;
 }
 
 .button a, .btn a{
@@ -28,4 +32,23 @@ a, a:visited, a:active{
 
 p{
     color: var(--dark-blue);
+    line-height: 5vh;
+}
+
+p a {
+    color: #f25f3a;
+}
+
+.row{
+    width: 90%;
+    // max-width: 900px;
+    margin: 0 auto;
+
+    @include util.breakpoint(large){
+        width: 80%;
+    }
+}
+
+li {
+    list-style: none;
 }
