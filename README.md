@@ -10,7 +10,7 @@ A few things that made it tasking was the differing order of elements on mobile 
 
 ## Links
 - Solution URL: [Github repo](https://github.com/Opeyimika-sudo/Manage-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://opeyimika-sudo.github.io/Manage-landing-page/)
 
 ## My process
 
