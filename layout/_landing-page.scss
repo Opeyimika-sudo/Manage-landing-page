@@ -335,7 +335,7 @@
             display: none;
 
             @include util.breakpoint(large){
-                display: inline-block;
+                display: block;
             }
         }
         
@@ -362,7 +362,7 @@
                 position: absolute;
                 top: -25px;
                 transform: translateX(46%);
-                left: 43%;
+                left: 40%;
 
                 @include util.breakpoint(large){
                     left: 41%;
