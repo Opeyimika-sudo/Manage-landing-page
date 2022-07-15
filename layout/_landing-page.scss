@@ -620,7 +620,8 @@
 
     > p{
         margin-bottom: 20px;
-
+        width: 55%;
+        margin-inline: auto;
         @include util.breakpoint(large){
             text-align: right;
             position: absolute;
