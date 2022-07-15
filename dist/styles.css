@@ -677,6 +677,8 @@ p {
 }
 .credit > p {
   margin-bottom: 20px;
+  width: 55%;
+  margin-inline: auto;
 }
 @media (min-width: 767px) {
   .credit > p {
