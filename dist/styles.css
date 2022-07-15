@@ -420,7 +420,7 @@ p {
 }
 @media (min-width: 767px) {
   .testimonials__list__two, .testimonials__list__three, .testimonials__list__four {
-    display: inline-block;
+    display: block;
   }
 }
 .testimonials__list__one, .testimonials__list__two, .testimonials__list__three, .testimonials__list__four {
@@ -445,7 +445,7 @@ p {
   position: absolute;
   top: -25px;
   transform: translateX(46%);
-  left: 43%;
+  left: 40%;
 }
 @media (min-width: 767px) {
   .testimonials__list__one--img, .testimonials__list__two--img, .testimonials__list__three--img, .testimonials__list__four--img {
