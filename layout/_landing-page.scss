@@ -1,5 +1,7 @@
 @use '../util' as util;
 .beautify{
+    // background-image: url('../images/bg-tablet-pattern.svg');
+    // background-size: 
     @include util.breakpoint(large){
         background-image: url('../images/bg-tablet-pattern.svg');
         background-size: 400px 500px;
@@ -154,8 +156,9 @@
     display: flex;
     flex-direction: column;
     background-image: url('../images/bg-tablet-pattern.svg');
-    background-size: 300px 220px;
-    background-position: right -60px bottom 20px;
+    background-size: 300px 200px;
+    background-position: right -175px bottom 30px;
+    // background-position: right -66.8vw bottom 7vh;
     background-repeat: no-repeat;
     @include util.breakpoint(large){
         flex-direction: row-reverse;
@@ -620,13 +623,14 @@
 
     > p{
         margin-bottom: 20px;
-        width: 55%;
+        width: 80%;
         margin-inline: auto;
         @include util.breakpoint(large){
             text-align: right;
             position: absolute;
             top: -60px;
             right: 40px;
+            width: 20%;
         }
     }
 }
